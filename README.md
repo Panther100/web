@@ -1,1 +1,1150 @@
-# web
+[bhawanipur-global-campus.html](https://github.com/user-attachments/files/29437592/bhawanipur-global-campus.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhawanipur Global Campus | Premier Institution in Kolkata</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0B1F3A;
+    --gold: #C8992A;
+    --gold-light: #F0C84A;
+    --cream: #FAF8F3;
+    --white: #FFFFFF;
+    --text: #1A1A2E;
+    --muted: #5A6480;
+    --border: #E2E0D8;
+    --section-bg: #F5F3EE;
+    --accent: #1D4ED8;
+    --success: #15803D;
+    --card-radius: 12px;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.6; }
+
+  /* ── NAV ── */
+  .topbar { background: var(--navy); color: rgba(255,255,255,0.7); font-size: 12.5px; padding: 6px 0; }
+  .topbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .topbar a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .topbar a:hover { color: var(--gold-light); }
+  .topbar-links { display: flex; gap: 1.5rem; align-items: center; }
+
+  nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; gap: 2rem; height: 68px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+  .logo-icon { width: 48px; height: 48px; background: var(--navy); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .logo-icon svg { width: 28px; height: 28px; fill: var(--gold); }
+  .logo-text { line-height: 1.2; }
+  .logo-text strong { display: block; font-size: 14px; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; }
+  .logo-text span { font-size: 10.5px; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 0; list-style: none; margin-left: auto; }
+  .nav-links > li { position: relative; }
+  .nav-links > li > a { display: flex; align-items: center; gap: 4px; padding: 0 14px; height: 68px; font-size: 13.5px; font-weight: 500; color: var(--text); text-decoration: none; white-space: nowrap; transition: color .2s; }
+  .nav-links > li > a:hover, .nav-links > li.active > a { color: var(--navy); }
+  .nav-links > li > a::after { content: ''; position: absolute; bottom: 0; left: 14px; right: 14px; height: 2.5px; background: var(--gold); transform: scaleX(0); transition: transform .2s; }
+  .nav-links > li > a:hover::after, .nav-links > li.active > a::after { transform: scaleX(1); }
+  .nav-links > li > a .chevron { font-size: 10px; opacity: 0.5; }
+  .dropdown { position: absolute; top: 100%; left: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); min-width: 220px; box-shadow: 0 12px 40px rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .2s; z-index: 200; }
+  .nav-links > li:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .dropdown a { display: block; padding: 10px 16px; font-size: 13px; color: var(--text); text-decoration: none; border-radius: 8px; margin: 4px; transition: background .15s; }
+  .dropdown a:hover { background: var(--section-bg); color: var(--navy); }
+  .nav-cta { margin-left: 12px; background: var(--gold); color: var(--navy) !important; padding: 0 20px !important; height: 38px !important; border-radius: 8px; font-weight: 600 !important; display: flex; align-items: center; }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+  .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 8px; margin-left: auto; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all .3s; }
+
+  /* ── HERO ── */
+  .hero { background: var(--navy); min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-accent { position: absolute; right: -100px; top: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(200,153,42,0.12) 0%, transparent 70%); pointer-events: none; }
+  .hero-accent2 { position: absolute; left: -80px; bottom: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(29,78,216,0.15) 0%, transparent 70%); pointer-events: none; }
+  .hero-inner { max-width: 1280px; margin: 0 auto; padding: 6rem 2rem; position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; width: 100%; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(200,153,42,0.15); border: 1px solid rgba(200,153,42,0.3); border-radius: 100px; padding: 6px 14px; margin-bottom: 1.5rem; }
+  .hero-badge span { font-size: 11.5px; font-weight: 600; color: var(--gold-light); letter-spacing: 0.06em; text-transform: uppercase; }
+  .hero-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); display: block; }
+  h1.hero-title { font-family: var(--font-display); font-size: clamp(36px, 5vw, 58px); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 1.25rem; }
+  h1.hero-title em { color: var(--gold); font-style: normal; }
+  .hero-subtitle { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 480px; margin-bottom: 2rem; line-height: 1.75; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 3rem; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; border-radius: 9px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all .2s; border: 2px solid transparent; }
+  .btn-primary { background: var(--gold); color: var(--navy); }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.3); }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+  .btn-navy { background: var(--navy); color: var(--white); }
+  .btn-navy:hover { background: #0f2a4a; }
+  .hero-stats { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .hero-stat { }
+  .hero-stat .num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--white); line-height: 1; }
+  .hero-stat .num sup { font-size: 18px; }
+  .hero-stat .lbl { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .hero-stat-divider { width: 1px; background: rgba(255,255,255,0.12); align-self: stretch; }
+  .hero-visual { position: relative; }
+  .hero-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(8px); }
+  .hero-card-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+  .ranking-list { display: flex; flex-direction: column; gap: 12px; }
+  .ranking-item { display: flex; align-items: center; gap: 12px; }
+  .ranking-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(200,153,42,0.15); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .ranking-info { flex: 1; }
+  .ranking-name { font-size: 13px; font-weight: 500; color: var(--white); }
+  .ranking-sub { font-size: 11px; color: rgba(255,255,255,0.45); }
+  .ranking-score { font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--gold-light); }
+  .hero-card2 { background: rgba(29,78,216,0.2); border: 1px solid rgba(29,78,216,0.3); border-radius: 16px; padding: 1.25rem; margin-top: 12px; }
+  .placement-row { display: flex; justify-content: space-between; align-items: center; }
+  .placement-label { font-size: 12px; color: rgba(255,255,255,0.5); }
+  .placement-val { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--white); }
+  .placement-val small { font-size: 14px; font-family: var(--font-body); font-weight: 400; color: rgba(255,255,255,0.5); }
+  .bar-track { height: 4px; background: rgba(255,255,255,0.1); border-radius: 100px; margin-top: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--gold); border-radius: 100px; width: 0; transition: width 1.5s ease; }
+
+  /* ── SECTION GENERIC ── */
+  section { padding: 80px 0; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+  .section-eyebrow { font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 10px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 16px; }
+  .section-subtitle { font-size: 16px; color: var(--muted); max-width: 580px; line-height: 1.75; }
+  .section-header { margin-bottom: 3rem; }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-subtitle { margin: 0 auto; }
+
+  /* ── NOTICE TICKER ── */
+  .notice-bar { background: #FFF8E7; border-top: 1px solid #F0D080; border-bottom: 1px solid #F0D080; padding: 10px 0; overflow: hidden; }
+  .notice-inner { display: flex; align-items: center; gap: 1rem; }
+  .notice-label { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-left: 2rem; }
+  .ticker-wrap { overflow: hidden; flex: 1; }
+  .ticker { display: flex; gap: 3rem; white-space: nowrap; animation: ticker 30s linear infinite; }
+  .ticker span { font-size: 13px; color: var(--text); }
+  .ticker span::before { content: '•'; color: var(--gold); margin-right: 0.75rem; }
+  @keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+
+  /* ── PROGRAMS ── */
+  .programs { background: var(--section-bg); }
+  .program-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .tab-btn { padding: 8px 18px; border: 1.5px solid var(--border); border-radius: 100px; font-size: 13px; font-weight: 500; cursor: pointer; background: var(--white); color: var(--muted); transition: all .2s; }
+  .tab-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .tab-btn:hover:not(.active) { border-color: var(--navy); color: var(--navy); }
+  .program-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .program-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 1.5rem; transition: all .25s; cursor: pointer; }
+  .program-card:hover { border-color: var(--gold); box-shadow: 0 8px 30px rgba(200,153,42,0.12); transform: translateY(-2px); }
+  .program-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--section-bg); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 1rem; }
+  .program-name { font-weight: 600; font-size: 15px; color: var(--navy); margin-bottom: 6px; }
+  .program-meta { display: flex; gap: 1rem; margin-bottom: 12px; }
+  .program-tag { font-size: 11px; font-weight: 500; color: var(--muted); background: var(--section-bg); padding: 3px 8px; border-radius: 4px; }
+  .program-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
+  .program-link { font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+
+  /* ── NUMBERS ── */
+  .numbers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .number-card { text-align: center; padding: 2.5rem 1rem; background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); }
+  .number-card .big { font-family: var(--font-display); font-size: 48px; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+  .number-card .big .accent { color: var(--gold); }
+  .number-card .label { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+  /* ── PLACEMENTS ── */
+  .placements { background: var(--navy); }
+  .placements .section-eyebrow { color: var(--gold-light); }
+  .placements .section-title { color: var(--white); }
+  .placements .section-subtitle { color: rgba(255,255,255,0.6); }
+  .placement-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 3rem; }
+  .p-highlight { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--card-radius); padding: 1.75rem; }
+  .p-highlight .val { font-family: var(--font-display); font-size: 38px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 6px; }
+  .p-highlight .val .g { color: var(--gold-light); }
+  .p-highlight .desc { font-size: 13px; color: rgba(255,255,255,0.55); }
+  .recruiter-section-title { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
+  .recruiter-logos { display: flex; flex-wrap: wrap; gap: 12px; }
+  .recruiter-pill { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.65); transition: all .2s; }
+  .recruiter-pill:hover { background: rgba(255,255,255,0.12); color: var(--white); }
+
+  /* ── ADMISSIONS ── */
+  .admissions-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+  .steps-list { display: flex; flex-direction: column; gap: 0; }
+  .step { display: flex; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+  .step:last-child { border-bottom: none; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: var(--white); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-title { font-weight: 600; font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .step-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .admission-form { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+  .form-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; }
+  .form-sub { font-size: 13px; color: var(--muted); margin-bottom: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-size: 12.5px; font-weight: 500; color: var(--text); }
+  input, select, textarea { width: 100%; border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px; font-family: var(--font-body); color: var(--text); background: var(--white); transition: border-color .2s, box-shadow .2s; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(11,31,58,0.08); }
+  textarea { resize: vertical; min-height: 90px; }
+  .submit-btn { width: 100%; background: var(--navy); color: var(--white); border: none; border-radius: 9px; padding: 13px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: var(--font-body); transition: background .2s; margin-top: 6px; }
+  .submit-btn:hover { background: #0f2a4a; }
+
+  /* ── FACULTY ── */
+  .faculty { background: var(--section-bg); }
+  .faculty-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+  .faculty-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); overflow: hidden; transition: all .25s; }
+  .faculty-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+  .faculty-avatar { height: 140px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%); }
+  .avatar-initials { width: 72px; height: 72px; border-radius: 50%; background: rgba(200,153,42,0.2); border: 3px solid rgba(200,153,42,0.4); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--gold-light); }
+  .faculty-info { padding: 1.25rem; }
+  .faculty-name { font-weight: 700; font-size: 15px; color: var(--navy); margin-bottom: 3px; }
+  .faculty-dept { font-size: 12px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .faculty-qual { font-size: 12.5px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+  .faculty-exp { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+  .exp-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+  /* ── EVENTS ── */
+  .events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .event-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 1.5rem; display: flex; gap: 1.25rem; transition: all .2s; }
+  .event-card:hover { border-color: var(--gold); }
+  .event-date { text-align: center; min-width: 52px; }
+  .event-day { font-family: var(--font-display); font-size: 30px; font-weight: 700; color: var(--navy); line-height: 1; }
+  .event-month { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold); font-weight: 600; }
+  .event-divider { width: 1px; background: var(--border); }
+  .event-info { flex: 1; }
+  .event-category { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 5px; }
+  .event-title { font-weight: 600; font-size: 15px; color: var(--navy); margin-bottom: 6px; }
+  .event-meta { font-size: 12.5px; color: var(--muted); display: flex; gap: 12px; }
+
+  /* ── INFRA ── */
+  .infra { background: var(--section-bg); }
+  .infra-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .infra-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 1.5rem; text-align: center; transition: all .2s; }
+  .infra-card:hover { border-color: var(--navy); }
+  .infra-icon { font-size: 32px; margin-bottom: 12px; }
+  .infra-name { font-weight: 600; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
+  .infra-detail { font-size: 12.5px; color: var(--muted); }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--navy); }
+  .testimonials .section-eyebrow { color: var(--gold-light); }
+  .testimonials .section-title { color: var(--white); }
+  .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .t-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--card-radius); padding: 1.75rem; }
+  .t-quote { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.75; margin-bottom: 1.25rem; font-style: italic; }
+  .t-author { display: flex; align-items: center; gap: 12px; }
+  .t-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(200,153,42,0.2); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; color: var(--gold-light); flex-shrink: 0; }
+  .t-name { font-weight: 600; font-size: 14px; color: var(--white); }
+  .t-role { font-size: 12px; color: rgba(255,255,255,0.45); }
+  .t-company { font-size: 11.5px; color: var(--gold-light); font-weight: 500; margin-top: 2px; }
+
+  /* ── CONTACT / MAP ── */
+  .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
+  .contact-info h3 { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem; }
+  .contact-items { display: flex; flex-direction: column; gap: 1.25rem; }
+  .c-item { display: flex; gap: 14px; align-items: flex-start; }
+  .c-icon { width: 42px; height: 42px; background: var(--section-bg); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .c-label { font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 3px; }
+  .c-val { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .c-val a { color: var(--accent); text-decoration: none; }
+  .map-placeholder { background: var(--section-bg); border: 1px solid var(--border); border-radius: 16px; height: 340px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+  .map-placeholder .map-icon { font-size: 48px; }
+  .map-placeholder p { font-size: 14px; color: var(--muted); }
+  .map-placeholder a { color: var(--accent); font-size: 13px; font-weight: 600; text-decoration: none; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 60px 0 0; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-brand p { font-size: 13.5px; line-height: 1.75; margin: 1rem 0; }
+  .footer-social { display: flex; gap: 10px; }
+  .social-btn { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: all .2s; }
+  .social-btn:hover { background: rgba(200,153,42,0.2); border-color: rgba(200,153,42,0.4); color: var(--gold-light); }
+  .footer-col h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); font-weight: 600; margin-bottom: 1rem; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13.5px; transition: color .2s; }
+  .footer-col ul li a:hover { color: var(--gold-light); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 1rem; }
+  .footer-bottom p { font-size: 12.5px; }
+  .footer-bottom-links { display: flex; gap: 1.5rem; }
+  .footer-bottom-links a { font-size: 12.5px; color: rgba(255,255,255,0.45); text-decoration: none; }
+  .footer-bottom-links a:hover { color: var(--gold-light); }
+  .naac-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(21,128,61,0.15); border: 1px solid rgba(21,128,61,0.3); border-radius: 8px; padding: 6px 12px; margin-top: 1rem; }
+  .naac-badge span { font-size: 12px; font-weight: 700; color: #4ade80; }
+
+  /* ── HIGHLIGHTS STRIP ── */
+  .highlights-strip { padding: 28px 0; border-bottom: 1px solid var(--border); }
+  .highlights-inner { display: flex; align-items: center; justify-content: space-around; gap: 2rem; flex-wrap: wrap; }
+  .highlight-item { display: flex; align-items: center; gap: 12px; }
+  .highlight-icon { font-size: 24px; }
+  .highlight-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--navy); }
+  .highlight-text span { font-size: 12px; color: var(--muted); }
+  .h-divider { height: 32px; width: 1px; background: var(--border); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-visual { display: none; }
+    .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+    .placement-highlights { grid-template-columns: 1fr 1fr; }
+    .admissions-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .t-grid { grid-template-columns: 1fr 1fr; }
+    .events-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+    .placement-highlights { grid-template-columns: 1fr; }
+    .t-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.25rem; }
+    section { padding: 56px 0; }
+    .form-row { grid-template-columns: 1fr; }
+    .highlights-inner { justify-content: flex-start; }
+    .h-divider { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-links">
+      <a href="#">📞 +91 33 2476 4075</a>
+      <a href="#">✉ admissions@bgc.edu.in</a>
+    </div>
+    <div class="topbar-links">
+      <a href="#">Student Portal</a>
+      <a href="#">Alumni</a>
+      <a href="#">E-Library</a>
+      <a href="#">IQAC</a>
+      <a href="#">NAAC</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 28 28"><path d="M14 2L2 9v10l12 7 12-7V9L14 2zm0 3l9 5.2v9.6L14 25l-9-5.2V10.2L14 5z"/></svg>
+      </div>
+      <div class="logo-text">
+        <strong>Bhawanipur Global Campus</strong>
+        <span>Formerly NSHM Knowledge Campus, Kolkata</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li>
+        <a href="#">About <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#">About BGC</a>
+          <a href="#">Vision & Mission</a>
+          <a href="#">Leadership</a>
+          <a href="#">Accreditations</a>
+          <a href="#">Rankings</a>
+          <a href="#">Campus Tour</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">Academics <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#">B.Tech Programs</a>
+          <a href="#">MBA / PGDM</a>
+          <a href="#">BBA & BCA</a>
+          <a href="#">B.Sc & BA Programs</a>
+          <a href="#">PhD Research</a>
+          <a href="#">Certificate Courses</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">Admissions <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#">How to Apply</a>
+          <a href="#">Eligibility Criteria</a>
+          <a href="#">Fee Structure</a>
+          <a href="#">Scholarships</a>
+          <a href="#">International Students</a>
+        </div>
+      </li>
+      <li><a href="#">Placements</a></li>
+      <li>
+        <a href="#">Campus <span class="chevron">▾</span></a>
+        <div class="dropdown">
+          <a href="#">Infrastructure</a>
+          <a href="#">Hostels</a>
+          <a href="#">Sports & Fitness</a>
+          <a href="#">Clubs & Societies</a>
+          <a href="#">Cafeteria</a>
+        </div>
+      </li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#admissions" class="nav-cta btn">Apply Now →</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-accent2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span>Admissions Open 2025–26</span></div>
+      <h1 class="hero-title">Shape Your Future at<br><em>Bhawanipur Global Campus</em></h1>
+      <p class="hero-subtitle">A premier institution in Kolkata offering industry-aligned programs, world-class faculty, and exceptional placement support. NAAC accredited. WB-JEE approved.</p>
+      <div class="hero-actions">
+        <a href="#admissions" class="btn btn-primary">Apply for Admission →</a>
+        <a href="#programs" class="btn btn-outline">Explore Programs</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">25<sup>+</sup></div>
+          <div class="lbl">Years of Excellence</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="num">12K<sup>+</sup></div>
+          <div class="lbl">Alumni Worldwide</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="num">94%</div>
+          <div class="lbl">Placement Rate</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="num">₹18L</div>
+          <div class="lbl">Highest Package</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-title">🏆 Rankings & Recognition</div>
+        <div class="ranking-list">
+          <div class="ranking-item">
+            <div class="ranking-icon">🎓</div>
+            <div class="ranking-info">
+              <div class="ranking-name">NAAC Accredited</div>
+              <div class="ranking-sub">National Assessment & Accreditation Council</div>
+            </div>
+            <div class="ranking-score">A Grade</div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-icon">🏛️</div>
+            <div class="ranking-info">
+              <div class="ranking-name">AICTE Approved</div>
+              <div class="ranking-sub">All India Council for Technical Education</div>
+            </div>
+            <div class="ranking-score">✓</div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-icon">📊</div>
+            <div class="ranking-info">
+              <div class="ranking-name">NIRF Ranked</div>
+              <div class="ranking-sub">National Institutional Ranking Framework</div>
+            </div>
+            <div class="ranking-score">Top 200</div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-icon">🌐</div>
+            <div class="ranking-info">
+              <div class="ranking-name">Industry Connect</div>
+              <div class="ranking-sub">MoU with 80+ global companies</div>
+            </div>
+            <div class="ranking-score">80+</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card2">
+        <div class="placement-row">
+          <div>
+            <div class="placement-label">2024 Batch Placement</div>
+            <div class="placement-val">94% <small>students placed</small></div>
+          </div>
+          <div style="text-align:right">
+            <div class="placement-label">Avg Package</div>
+            <div class="placement-val">₹6.2L <small>per annum</small></div>
+          </div>
+        </div>
+        <div class="bar-track"><div class="bar-fill" id="barFill"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE TICKER -->
+<div class="notice-bar">
+  <div class="notice-inner">
+    <div class="notice-label">📢 Latest</div>
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span>Admissions Open for B.Tech 2025–26 — Apply before July 15</span>
+        <span>MBA PGDM Entrance Results Declared — Check your result</span>
+        <span>Tata Consultancy Services campus drive — 120 offers extended to 2024 batch</span>
+        <span>Scholarship portal open for SC/ST/OBC students — last date June 30</span>
+        <span>National Seminar on AI & Data Science — Register Now</span>
+        <span>NAAC Peer Team Visit — BGC scores A Grade</span>
+        <span>International MoU signed with University of Greenwich, UK</span>
+        <span>Admissions Open for B.Tech 2025–26 — Apply before July 15</span>
+        <span>MBA PGDM Entrance Results Declared — Check your result</span>
+        <span>Tata Consultancy Services campus drive — 120 offers extended to 2024 batch</span>
+        <span>Scholarship portal open for SC/ST/OBC students — last date June 30</span>
+        <span>National Seminar on AI & Data Science — Register Now</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HIGHLIGHTS STRIP -->
+<div class="highlights-strip">
+  <div class="container">
+    <div class="highlights-inner">
+      <div class="highlight-item">
+        <div class="highlight-icon">🏛️</div>
+        <div class="highlight-text"><strong>NAAC A Grade</strong><span>Accredited Institution</span></div>
+      </div>
+      <div class="h-divider"></div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🤝</div>
+        <div class="highlight-text"><strong>80+ Industry MoUs</strong><span>Global Partnerships</span></div>
+      </div>
+      <div class="h-divider"></div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🌍</div>
+        <div class="highlight-text"><strong>International Exchange</strong><span>UK, USA, Australia</span></div>
+      </div>
+      <div class="h-divider"></div>
+      <div class="highlight-item">
+        <div class="highlight-icon">💼</div>
+        <div class="highlight-text"><strong>450+ Recruiters</strong><span>Active Placement Cell</span></div>
+      </div>
+      <div class="h-divider"></div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🔬</div>
+        <div class="highlight-text"><strong>15 Research Labs</strong><span>Cutting-edge Facilities</span></div>
+      </div>
+      <div class="h-divider"></div>
+      <div class="highlight-item">
+        <div class="highlight-icon">🎓</div>
+        <div class="highlight-text"><strong>₹50 Cr Scholarships</strong><span>Awarded Since 2015</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Academic Programs</div>
+      <h2 class="section-title">Find Your Perfect Program</h2>
+      <p class="section-subtitle">From engineering to management, healthcare to humanities — choose from 40+ programs designed in collaboration with industry leaders.</p>
+    </div>
+    <div class="program-tabs">
+      <button class="tab-btn active" onclick="filterPrograms('all', this)">All Programs</button>
+      <button class="tab-btn" onclick="filterPrograms('engineering', this)">Engineering</button>
+      <button class="tab-btn" onclick="filterPrograms('management', this)">Management</button>
+      <button class="tab-btn" onclick="filterPrograms('commerce', this)">Commerce & BBA</button>
+      <button class="tab-btn" onclick="filterPrograms('arts', this)">Arts & Science</button>
+      <button class="tab-btn" onclick="filterPrograms('health', this)">Health Sciences</button>
+    </div>
+    <div class="program-grid" id="programGrid"></div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section style="background:var(--white); padding: 64px 0;">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="number-card">
+        <div class="big">40<span class="accent">+</span></div>
+        <div class="label">Programs Offered</div>
+      </div>
+      <div class="number-card">
+        <div class="big">6,500<span class="accent">+</span></div>
+        <div class="label">Students Enrolled</div>
+      </div>
+      <div class="number-card">
+        <div class="big">320<span class="accent">+</span></div>
+        <div class="label">Faculty Members</div>
+      </div>
+      <div class="number-card">
+        <div class="big">450<span class="accent">+</span></div>
+        <div class="label">Recruiting Companies</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLACEMENTS -->
+<section class="placements">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Placements 2024</div>
+      <h2 class="section-title">Careers That Matter</h2>
+      <p class="section-subtitle">Our dedicated Placement & Career Services team ensures every student graduates with a career, not just a degree.</p>
+    </div>
+    <div class="placement-highlights">
+      <div class="p-highlight">
+        <div class="val">₹<span class="g">18</span>L</div>
+        <div class="desc">Highest CTC Package — SDE role at a US-based fintech</div>
+      </div>
+      <div class="p-highlight">
+        <div class="val">₹<span class="g">6.2</span>L</div>
+        <div class="desc">Average CTC Package across all programs</div>
+      </div>
+      <div class="p-highlight">
+        <div class="val"><span class="g">94</span>%</div>
+        <div class="desc">Placement rate — 2024 graduating batch</div>
+      </div>
+    </div>
+    <div class="recruiter-section-title">TOP RECRUITERS</div>
+    <div class="recruiter-logos">
+      <div class="recruiter-pill">TCS</div>
+      <div class="recruiter-pill">Infosys</div>
+      <div class="recruiter-pill">Wipro</div>
+      <div class="recruiter-pill">Cognizant</div>
+      <div class="recruiter-pill">IBM</div>
+      <div class="recruiter-pill">Accenture</div>
+      <div class="recruiter-pill">Capgemini</div>
+      <div class="recruiter-pill">HCL Tech</div>
+      <div class="recruiter-pill">Amazon</div>
+      <div class="recruiter-pill">Deloitte</div>
+      <div class="recruiter-pill">KPMG</div>
+      <div class="recruiter-pill">EY</div>
+      <div class="recruiter-pill">PwC</div>
+      <div class="recruiter-pill">HDFC Bank</div>
+      <div class="recruiter-pill">ICICI Bank</div>
+      <div class="recruiter-pill">Axis Bank</div>
+      <div class="recruiter-pill">Bajaj Finance</div>
+      <div class="recruiter-pill">Reliance</div>
+      <div class="recruiter-pill">Tata Motors</div>
+      <div class="recruiter-pill">L&T</div>
+      <div class="recruiter-pill">Mahindra</div>
+      <div class="recruiter-pill">ONGC</div>
+      <div class="recruiter-pill">Byju's</div>
+      <div class="recruiter-pill">Unacademy</div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section id="admissions">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Admissions 2025–26</div>
+      <h2 class="section-title">Begin Your Journey</h2>
+      <p class="section-subtitle">Simple 4-step process to secure your seat. Applications reviewed on a rolling basis.</p>
+    </div>
+    <div class="admissions-grid">
+      <div>
+        <div class="steps-list">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <div class="step-title">Fill Online Application</div>
+              <div class="step-desc">Complete the online form with your personal, academic, and program preferences. Upload required documents (10th & 12th marksheets, ID proof).</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <div class="step-title">Entrance Test / Merit Review</div>
+              <div class="step-desc">Appear for BGC's own entrance test or submit your JEE / WBJEE / MAT / CAT / CMAT scores. Direct merit-based admissions available for top performers.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <div class="step-title">Counselling & Seat Allotment</div>
+              <div class="step-desc">Attend the online/offline counselling session. Seats allotted based on merit, category, and preference. Letter of Intent (LoI) issued.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div>
+              <div class="step-title">Fee Payment & Enrollment</div>
+              <div class="step-desc">Pay the admission fee via online portal. Collect your Student ID, timetable, and access to all campus portals. Welcome to BGC!</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2rem; padding:1.5rem; background:var(--section-bg); border-radius:var(--card-radius); border-left:4px solid var(--gold);">
+          <div style="font-weight:700; color:var(--navy); margin-bottom:0.5rem;">📅 Important Dates 2025–26</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:13px; color:var(--muted);">
+            <span>Application Start</span><span style="color:var(--text); font-weight:500;">1 March 2025</span>
+            <span>Last Date (B.Tech)</span><span style="color:var(--text); font-weight:500;">15 July 2025</span>
+            <span>Last Date (MBA)</span><span style="color:var(--text); font-weight:500;">30 June 2025</span>
+            <span>Counselling Begins</span><span style="color:var(--text); font-weight:500;">20 July 2025</span>
+            <span>Session Starts</span><span style="color:var(--text); font-weight:500;">1 August 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="admission-form">
+        <div class="form-title">Enquire Now</div>
+        <div class="form-sub">Our admissions counsellor will contact you within 24 hours.</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" placeholder="Anubhab">
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" placeholder="Das">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mobile Number *</label>
+            <input type="tel" placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="you@email.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Program Interested In *</label>
+            <select>
+              <option value="">Select Program</option>
+              <option>B.Tech (CSE)</option>
+              <option>B.Tech (ECE)</option>
+              <option>B.Tech (Mechanical)</option>
+              <option>B.Tech (Civil)</option>
+              <option>MBA / PGDM</option>
+              <option>BBA</option>
+              <option>BCA</option>
+              <option>B.Sc (Data Science)</option>
+              <option>B.Com (Honours)</option>
+              <option>BA (Economics)</option>
+              <option>M.Tech</option>
+              <option>MCA</option>
+              <option>PhD</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Year of Passing (12th)</label>
+            <select>
+              <option>2025</option>
+              <option>2024</option>
+              <option>2023</option>
+              <option>2022 or earlier</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group full" style="margin-bottom:14px;">
+          <label>City / State</label>
+          <input type="text" placeholder="Durgapur, West Bengal">
+        </div>
+        <div class="form-group full" style="margin-bottom:14px;">
+          <label>Any questions or special requirements?</label>
+          <textarea placeholder="E.g. I want to know about scholarship options for the MBA program..."></textarea>
+        </div>
+        <button class="submit-btn" onclick="handleEnquiry()">Submit Enquiry →</button>
+        <div id="enquiryMsg" style="display:none; margin-top:12px; padding:12px; background:#f0fdf4; border-radius:8px; font-size:13px; color:#15803d; font-weight:500; text-align:center;">✅ Thank you! Our team will contact you within 24 hours.</div>
+        <p style="font-size:11.5px; color:var(--muted); text-align:center; margin-top:12px;">By submitting, you agree to our Privacy Policy. We respect your data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section class="faculty">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Our Faculty</div>
+      <h2 class="section-title">Learn from the Best</h2>
+      <p class="section-subtitle">300+ faculty members — PhDs, industry veterans, and researchers from IITs, IIMs, and leading global universities.</p>
+    </div>
+    <div class="faculty-grid" id="facultyGrid"></div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#" class="btn btn-navy">View All Faculty →</a>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section>
+  <div class="container">
+    <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:2rem;">
+      <div>
+        <div class="section-eyebrow">Campus Life</div>
+        <h2 class="section-title" style="margin-bottom:0;">Upcoming Events</h2>
+      </div>
+      <a href="#" class="btn btn-navy" style="font-size:13px; padding:10px 18px;">View All Events →</a>
+    </div>
+    <div class="events-grid" id="eventsGrid"></div>
+  </div>
+</section>
+
+<!-- INFRASTRUCTURE -->
+<section class="infra">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-eyebrow">Campus Infrastructure</div>
+      <h2 class="section-title">World-Class Facilities</h2>
+      <p class="section-subtitle">A 10-acre campus equipped with modern labs, a library of 80,000+ books, high-speed internet, and vibrant social spaces.</p>
+    </div>
+    <div class="infra-grid" id="infraGrid"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-eyebrow">Alumni Stories</div>
+      <h2 class="section-title">Voices of Our Graduates</h2>
+    </div>
+    <div class="t-grid" id="testimonialsGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Get in Touch</div>
+      <h2 class="section-title">We're Here to Help</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-items">
+          <div class="c-item">
+            <div class="c-icon">📍</div>
+            <div>
+              <div class="c-label">Campus Address</div>
+              <div class="c-val">11A, Sarat Bose Road, Kolkata — 700020<br>West Bengal, India</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">📞</div>
+            <div>
+              <div class="c-label">Phone Numbers</div>
+              <div class="c-val">
+                <a href="tel:+913324764075">+91 33 2476 4075</a> (Main)<br>
+                <a href="tel:+919831234567">+91 98312 34567</a> (Admissions)
+              </div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">✉️</div>
+            <div>
+              <div class="c-label">Email Addresses</div>
+              <div class="c-val">
+                <a href="mailto:admissions@bgc.edu.in">admissions@bgc.edu.in</a><br>
+                <a href="mailto:info@bgc.edu.in">info@bgc.edu.in</a>
+              </div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">🕐</div>
+            <div>
+              <div class="c-label">Office Hours</div>
+              <div class="c-val">Mon – Sat: 9:00 AM – 6:00 PM<br>Sunday: Closed (Admissions: 10 AM – 2 PM)</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">🚇</div>
+            <div>
+              <div class="c-label">How to Reach</div>
+              <div class="c-val">Nearest Metro: Kalighat Station (500m walk)<br>Bus Routes: 45, S12, S15, AC 37</div>
+            </div>
+          </div>
+        </div>
+        <div class="naac-badge" style="margin-top:1.5rem;">
+          <span>✓ NAAC A Grade | AICTE Approved | UGC Recognized | WBSCTE Affiliated</span>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-icon">🗺️</div>
+        <p style="font-weight:600; color:var(--navy);">Bhawanipur Global Campus</p>
+        <p>11A, Sarat Bose Road, Kolkata — 700020</p>
+        <a href="https://maps.google.com/?q=11A+Sarat+Bose+Road+Kolkata" target="_blank">Open in Google Maps →</a>
+        <div style="margin-top:1rem; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+          <a href="#" style="font-size:13px; padding:8px 14px; border:1px solid var(--border); border-radius:8px; text-decoration:none; color:var(--text); font-weight:500;">Get Directions</a>
+          <a href="#" style="font-size:13px; padding:8px 14px; background:var(--navy); border-radius:8px; text-decoration:none; color:var(--white); font-weight:500;">Schedule Campus Visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:0.5rem;">
+          <div style="width:40px; height:40px; background:rgba(200,153,42,0.15); border-radius:10px; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:20px;">🎓</span>
+          </div>
+          <div>
+            <div style="font-weight:700; color:var(--white); font-size:14px;">Bhawanipur Global Campus</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.4);">Formerly NSHM Knowledge Campus</div>
+          </div>
+        </div>
+        <p>Nurturing innovation, excellence, and leadership since 1999. A premier institution committed to holistic education and industry-ready graduates.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">🐦</a>
+          <a href="#" class="social-btn">▶</a>
+          <a href="#" class="social-btn">📸</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#">B.Tech Programs</a></li>
+          <li><a href="#">MBA / PGDM</a></li>
+          <li><a href="#">BBA & BCA</a></li>
+          <li><a href="#">B.Sc Data Science</a></li>
+          <li><a href="#">B.Com (Hons)</a></li>
+          <li><a href="#">M.Tech</a></li>
+          <li><a href="#">PhD Programs</a></li>
+          <li><a href="#">Certificate Courses</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Admissions Portal</a></li>
+          <li><a href="#">Fee Structure</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Student Portal</a></li>
+          <li><a href="#">E-Library</a></li>
+          <li><a href="#">Placement Cell</a></li>
+          <li><a href="#">IQAC Reports</a></li>
+          <li><a href="#">NAAC Documents</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Campus</h4>
+        <ul>
+          <li><a href="#">Campus Tour</a></li>
+          <li><a href="#">Hostel</a></li>
+          <li><a href="#">Sports Complex</a></li>
+          <li><a href="#">Clubs & Societies</a></li>
+          <li><a href="#">Events Calendar</a></li>
+          <li><a href="#">Research Centers</a></li>
+          <li><a href="#">Alumni Network</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Bhawanipur Global Campus. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">RTI</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const programs = [
+  { cat: 'engineering', icon: '💻', name: 'B.Tech — Computer Science & Engineering', duration: '4 Years', level: 'UG', desc: 'Specializations in AI/ML, Cloud Computing, Cybersecurity, and Full-Stack Dev. AICTE approved, WB-JEE recognized.' },
+  { cat: 'engineering', icon: '📡', name: 'B.Tech — Electronics & Communication', duration: '4 Years', level: 'UG', desc: 'VLSI, Embedded Systems, IoT, and Wireless Communication. Strong industry lab tie-ups with Texas Instruments.' },
+  { cat: 'engineering', icon: '⚙️', name: 'B.Tech — Mechanical Engineering', duration: '4 Years', level: 'UG', desc: 'CAD/CAM, Robotics, Thermal, and Production Engineering. Equipped with a world-class manufacturing lab.' },
+  { cat: 'engineering', icon: '🏗️', name: 'B.Tech — Civil Engineering', duration: '4 Years', level: 'UG', desc: 'Structural, Environmental, and Transportation Engineering. Partnered with L&T and RITES for internships.' },
+  { cat: 'engineering', icon: '🔬', name: 'M.Tech — CSE / VLSI', duration: '2 Years', level: 'PG', desc: 'Research-focused postgraduate program with GATE scholarship support and publications track record.' },
+  { cat: 'management', icon: '📊', name: 'MBA — Finance & Banking', duration: '2 Years', level: 'PG', desc: 'Specialization in investment banking, derivatives, and corporate finance. CFA and FRM prep integrated.' },
+  { cat: 'management', icon: '📣', name: 'MBA — Marketing & Digital Business', duration: '2 Years', level: 'PG', desc: 'Digital marketing, brand management, and consumer behaviour. Google and Meta certified curriculum.' },
+  { cat: 'management', icon: '🤖', name: 'MBA — Business Analytics', duration: '2 Years', level: 'PG', desc: 'Python, R, Tableau, and SQL integrated into the MBA curriculum. Highly sought after by analytics firms.' },
+  { cat: 'management', icon: '🌍', name: 'MBA — International Business', duration: '2 Years', level: 'PG', desc: 'Global trade, forex, and cross-border operations. Semester abroad option with partner universities in the UK.' },
+  { cat: 'commerce', icon: '🏦', name: 'BBA — Finance', duration: '3 Years', level: 'UG', desc: 'Core business administration with finance specialization. CPA/CA foundation alignment in year 3.' },
+  { cat: 'commerce', icon: '📱', name: 'BCA — Cloud & DevOps', duration: '3 Years', level: 'UG', desc: 'AWS, Azure, Docker, and Kubernetes integrated into BCA curriculum. Industry certifications included.' },
+  { cat: 'commerce', icon: '📒', name: 'B.Com (Honours)', duration: '3 Years', level: 'UG', desc: 'Taxation, auditing, cost accounting, and financial statements. Affiliated with Calcutta University.' },
+  { cat: 'arts', icon: '📈', name: 'B.Sc — Data Science & AI', duration: '3 Years', level: 'UG', desc: 'Statistics, machine learning, Python, and neural networks. One of the fastest-growing programs at BGC.' },
+  { cat: 'arts', icon: '🌐', name: 'BA — Economics', duration: '3 Years', level: 'UG', desc: 'Microeconomics, macroeconomics, econometrics, and public policy. Calcutta University affiliated.' },
+  { cat: 'health', icon: '🏥', name: 'B.Sc — Hospital Administration', duration: '3 Years', level: 'UG', desc: 'Healthcare management, medical coding, hospital operations. Tie-ups with Apollo, AMRI, and RG Kar.' },
+  { cat: 'health', icon: '🧪', name: 'B.Sc — Medical Lab Technology', duration: '3 Years', level: 'UG', desc: 'Clinical pathology, biochemistry, and hematology. Hands-on training in accredited diagnostic labs.' },
+];
+
+const faculty = [
+  { initials: 'PS', name: 'Prof. Partha Sarkar', dept: 'Computer Science', qual: 'Ph.D — IIT Kharagpur\nPostdoc — NUS Singapore', exp: '18 years' },
+  { initials: 'SM', name: 'Dr. Sunita Mukherjee', dept: 'Management', qual: 'Ph.D — IIM Calcutta\nMBA — IIM Ahmedabad', exp: '22 years' },
+  { initials: 'RB', name: 'Prof. Rajiv Basu', dept: 'Electronics', qual: 'Ph.D — Jadavpur University\nM.Tech — IIT Delhi', exp: '15 years' },
+  { initials: 'AD', name: 'Dr. Ananya Dutta', dept: 'Data Science', qual: 'Ph.D — Carnegie Mellon University, USA', exp: '12 years' },
+  { initials: 'SC', name: 'Prof. Sanjib Chatterjee', dept: 'Civil Engineering', qual: 'Ph.D — IIT Roorkee\nFellow — ICE London', exp: '20 years' },
+  { initials: 'NG', name: 'Dr. Nandini Ghosh', dept: 'Economics', qual: 'Ph.D — Calcutta University\nVisiting Fellow — LSE', exp: '14 years' },
+  { initials: 'AK', name: 'Prof. Abhijit Kumar', dept: 'Finance', qual: 'Ph.D — XLRI Jamshedpur\nCFA, FRM Charterholder', exp: '19 years' },
+  { initials: 'MB', name: 'Dr. Mita Banerjee', dept: 'Health Sciences', qual: 'MBBS — AIIMS New Delhi\nMD — PGIMER Chandigarh', exp: '25 years' },
+];
+
+const events = [
+  { day: '15', month: 'Jul', cat: 'Admissions', title: 'B.Tech Counselling Round 1', venue: 'BGC Auditorium, Main Campus', time: '10:00 AM – 4:00 PM' },
+  { day: '22', month: 'Jul', cat: 'Career Fair', title: 'BGC Summer Placement Drive 2025', venue: 'Placement Centre, Block C', time: '9:00 AM – 5:00 PM' },
+  { day: '28', month: 'Jul', cat: 'Academic', title: 'National Seminar — AI & Industry 5.0', venue: 'Conference Hall, Block A', time: '10:00 AM – 6:00 PM' },
+  { day: '02', month: 'Aug', cat: 'Orientation', title: 'Freshers Orientation Day 2025', venue: 'BGC Open Amphitheatre', time: '9:00 AM – 2:00 PM' },
+  { day: '10', month: 'Aug', cat: 'Cultural', title: 'Tarang — Annual Cultural Fest', venue: 'Campus-wide', time: '11:00 AM – 9:00 PM' },
+  { day: '18', month: 'Aug', cat: 'Research', title: 'International Conference on ML', venue: 'Innovation Hub, BGC', time: '9:00 AM – 5:00 PM' },
+];
+
+const infra = [
+  { icon: '📚', name: 'Central Library', detail: '80,000+ books · 120+ journals' },
+  { icon: '🖥️', name: 'Computer Labs', detail: '15 labs · 900+ workstations' },
+  { icon: '🔬', name: 'Research Labs', detail: '15 specialized labs' },
+  { icon: '🏋️', name: 'Sports Complex', detail: 'Courts, gym, swimming pool' },
+  { icon: '🎭', name: 'Auditorium', detail: '1,200 seat capacity' },
+  { icon: '🏠', name: 'Hostel', detail: '1,200 beds · Wi-Fi · CCTV' },
+  { icon: '🍽️', name: 'Cafeteria', detail: 'Multi-cuisine · 600 capacity' },
+  { icon: '🏥', name: 'Medical Centre', detail: '24×7 nurse · Tie-up hospital' },
+  { icon: '🌐', name: 'Wi-Fi Campus', detail: '1 Gbps · All zones covered' },
+  { icon: '🚌', name: 'Transport', detail: '30 routes · AC buses' },
+  { icon: '💡', name: 'Innovation Hub', detail: 'Incubator · 40+ startups' },
+  { icon: '🎨', name: 'Design Studio', detail: 'Adobe & Autodesk suites' },
+];
+
+const testimonials = [
+  { quote: 'BGC gave me more than a degree — it gave me the skills, the network, and the confidence to land a role at TCS straight out of college. The placement team is exceptional.', name: 'Priya Sharma', role: 'SDE, TCS Digital', batch: '2023 · B.Tech CSE', initials: 'PS' },
+  { quote: 'The MBA program at BGC is truly industry-integrated. Every semester had live projects with real companies. I got placed at Deloitte with a package I had only dreamed of.', name: 'Rahul Mondal', role: 'Business Analyst, Deloitte', batch: '2022 · MBA Finance', initials: 'RM' },
+  { quote: 'Coming from a small town in West Bengal, BGC was my launchpad. The faculty mentorship and the innovation hub helped me build my own startup — now a team of 12!', name: 'Soumya Das', role: 'Founder, AgroTech Ventures', batch: '2021 · BBA Marketing', initials: 'SD' },
+  { quote: 'The Data Science program is brilliantly structured. The faculty has real industry experience and the labs are equipped with the latest tools. Got into Amazon post-graduation.', name: 'Ananya Roy', role: 'Data Engineer, Amazon', batch: '2024 · B.Sc Data Science', initials: 'AR' },
+  { quote: 'Best decision of my life — choosing BGC for my M.Tech. Research guidance from Dr. Sarkar helped me publish in an IEEE conference and crack a role at Intel.', name: 'Kousik Ghosh', role: 'VLSI Engineer, Intel India', batch: '2023 · M.Tech VLSI', initials: 'KG' },
+  { quote: 'The MBA in International Business opened global doors for me. The semester-abroad program in the UK was life-changing. I\'m now with KPMG\'s London office.', name: 'Riya Chatterjee', role: 'Senior Consultant, KPMG UK', batch: '2022 · MBA Intl. Business', initials: 'RC' },
+];
+
+function renderPrograms(filter) {
+  const grid = document.getElementById('programGrid');
+  const list = filter === 'all' ? programs : programs.filter(p => p.cat === filter);
+  grid.innerHTML = list.map(p => `
+    <div class="program-card">
+      <div class="program-icon">${p.icon}</div>
+      <div class="program-name">${p.name}</div>
+      <div class="program-meta">
+        <span class="program-tag">⏱ ${p.duration}</span>
+        <span class="program-tag">${p.level}</span>
+      </div>
+      <div class="program-desc">${p.desc}</div>
+      <a href="#admissions" class="program-link">Enquire & Apply <span>→</span></a>
+    </div>
+  `).join('');
+}
+
+function filterPrograms(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPrograms(cat);
+}
+
+function renderFaculty() {
+  document.getElementById('facultyGrid').innerHTML = faculty.map(f => `
+    <div class="faculty-card">
+      <div class="faculty-avatar"><div class="avatar-initials">${f.initials}</div></div>
+      <div class="faculty-info">
+        <div class="faculty-name">${f.name}</div>
+        <div class="faculty-dept">${f.dept}</div>
+        <div class="faculty-qual">${f.qual.replace('\n', '<br>')}</div>
+        <div class="faculty-exp"><div class="exp-dot"></div>${f.exp} experience</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderEvents() {
+  document.getElementById('eventsGrid').innerHTML = events.map(e => `
+    <div class="event-card">
+      <div class="event-date">
+        <div class="event-day">${e.day}</div>
+        <div class="event-month">${e.month}</div>
+      </div>
+      <div class="event-divider"></div>
+      <div class="event-info">
+        <div class="event-category">${e.cat}</div>
+        <div class="event-title">${e.title}</div>
+        <div class="event-meta">
+          <span>📍 ${e.venue}</span>
+          <span>🕐 ${e.time}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderInfra() {
+  document.getElementById('infraGrid').innerHTML = infra.map(i => `
+    <div class="infra-card">
+      <div class="infra-icon">${i.icon}</div>
+      <div class="infra-name">${i.name}</div>
+      <div class="infra-detail">${i.detail}</div>
+    </div>
+  `).join('');
+}
+
+function renderTestimonials() {
+  document.getElementById('testimonialsGrid').innerHTML = testimonials.map(t => `
+    <div class="t-card">
+      <div class="t-quote">"${t.quote}"</div>
+      <div class="t-author">
+        <div class="t-avatar">${t.initials}</div>
+        <div>
+          <div class="t-name">${t.name}</div>
+          <div class="t-role">${t.role}</div>
+          <div class="t-company">${t.batch}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function handleEnquiry() {
+  document.getElementById('enquiryMsg').style.display = 'block';
+  document.querySelector('.submit-btn').textContent = '✓ Submitted';
+  document.querySelector('.submit-btn').style.background = '#15803d';
+}
+
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  links.style.flexDirection = 'column';
+  links.style.position = 'fixed';
+  links.style.top = '68px';
+  links.style.left = '0';
+  links.style.right = '0';
+  links.style.background = '#fff';
+  links.style.padding = '1rem 2rem';
+  links.style.boxShadow = '0 8px 30px rgba(0,0,0,0.1)';
+  links.style.zIndex = '200';
+}
+
+renderPrograms('all');
+renderFaculty();
+renderEvents();
+renderInfra();
+renderTestimonials();
+
+setTimeout(() => {
+  const bar = document.getElementById('barFill');
+  if (bar) bar.style.width = '94%';
+}, 800);
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.program-card, .faculty-card, .event-card, .infra-card, .t-card, .number-card, .p-highlight').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
